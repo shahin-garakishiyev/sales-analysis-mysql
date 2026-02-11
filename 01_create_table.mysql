@@ -1,0 +1,18 @@
+CREATE TABLE `sales` (
+  `material_id` int DEFAULT NULL,
+  `product_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `master_id` int DEFAULT NULL,
+  `master_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `referral_source` tinyint DEFAULT NULL,
+  `master_branch` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `branch_id` int DEFAULT NULL,
+  `branch_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `region_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `promotion_flag` tinyint DEFAULT NULL,
+  `sale_date` date DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `product_count` int DEFAULT NULL,
+  `revenue` decimal(12,2) DEFAULT NULL,
+  `expences` decimal(12,2) DEFAULT NULL,
+  `net_profit` decimal(12,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
