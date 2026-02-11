@@ -1,0 +1,18 @@
+-- data_cleaning.mysql
+-- Data cleaning queries for sales table
+
+-- 1. Check total rows and non-null branch names
+SELECT
+    COUNT(*) AS total_rows,
+    COUNT(branch_name) AS branch_names
+FROM sales;
+
+-- 2. Fix net_profit decimal format (replace comma with dot)
+UPDATE sales
+SET net_profit = REPLACE(net_profit, ',', '.');
+
+-- 3. Replace NULL branch names with 'Unknown'
+UPDATE sales
+SET branch_name = COALESCE(branch_name, 'Unknown'); 
+
+
