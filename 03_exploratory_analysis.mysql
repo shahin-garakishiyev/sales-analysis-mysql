@@ -1,0 +1,52 @@
+#-- 03_exploratory_analysis.sql
+-- This file contains exploratory data analysis queries on sales data
+
+
+-- 1. Calculate total revenue by branch
+-- Purpose: Identify which branches generate the highest revenue
+SELECT branch_name, SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY branch_name
+ORDER BY total_revenue DESC;
+
+
+-- 2. Calculate total revenue by product
+-- Purpose: Find top-performing products based on revenue
+SELECT product_name, SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY product_name
+ORDER BY total_revenue DESC;
+
+
+-- 3. Analyze promotion impact on profitability
+-- Purpose: Compare average net profit for promoted vs non-promoted sales
+SELECT promotion_flag, AVG(net_profit) AS avg_profit
+FROM sales
+GROUP BY promotion_flag;
+
+
+-- 4. Analyze daily revenue trend
+-- Purpose: Observe how revenue changes by day
+-- Note: This query groups sales by day extracted from sale_date
+SELECT region_name,
+SELECT Day(sale_date) AS Day,
+SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY day(sale_date)
+ORDER BY day;
+
+
+-- 5. Calculate total revenue by region
+-- Purpose: Identify which regions contribute the most revenue
+SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY region_name
+ORDER BY total_revenue DESC;
+
+
+-- 6. Overall business performance summary
+-- Purpose: Get a high-level overview of revenue, expenses, and profit
+SELECT SUM(revenue) AS total_revenue,
+SUM(expences) AS total_expenses,
+SUM(net_profit) AS total_profit
+FROM sales;
