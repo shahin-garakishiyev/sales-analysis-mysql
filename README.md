@@ -1,16 +1,51 @@
 # Sales Analysis with MySQL
 
 ## Overview
-Junior-level SQL project: learning data cleaning, exploratory analysis, and business queries on sales data.
+This is a simple MySQL project created to practice SQL skills using sales data.  
+The project focuses on cleaning data and analyzing sales performance with basic MySQL queries.
 
-## Skills Practiced
-- SQL basics (SELECT, SUM, GROUP BY, ORDER BY)
-- Data cleaning and NULL handling
-- Business-oriented analysis
+---
 
-## Key Questions Answered
-- Which products generate most revenue?
-- Promo vs profit
-- Revenue by region
-- Branches with high revenue
-- Daily revenue trend
+## Tools Used
+- MySQL   
+- GitHub  
+
+---
+
+## Project Files
+
+### 01_create_table.mysql
+This file creates the `sales` table and defines the structure of the dataset.  
+It is the starting point of the project.
+
+---
+
+### 02_data_cleaning.mysql
+This file is used to clean the sales data.  
+In this step, missing values are handled, incorrect formats are fixed, and the data is prepared for analysis.
+
+---
+
+### 03_exploratory_analysis.mysql
+This file contains MySQL queries that analyze the sales data.  
+The queries answer simple business questions such as:
+- Revenue by branch  
+- Revenue by product  
+- Profit comparison for promotions  
+- Daily revenue trends  
+- Revenue by region  
+- Overall revenue, expenses, and profit  
+
+---
+
+## What I Learned
+- Writing basic MySQL queries  
+- Using GROUP BY and aggregate functions  
+- Cleaning data using MySQL  
+- Analyzing data from a business perspective  
+
+---
+
+## Purpose
+This project was created for learning and practice and can be used as a beginner MySQL portfolio project.
+
